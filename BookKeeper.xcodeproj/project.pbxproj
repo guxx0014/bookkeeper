@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9758E0BC16090A89000ADABB /* TransactionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9758E0BA16090A89000ADABB /* TransactionTableViewController.m */; };
+		97733C9B138F4D2000938C09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97733C9A138F4D2000938C09 /* UIKit.framework */; };
+		97733C9D138F4D2000938C09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97733C9C138F4D2000938C09 /* Foundation.framework */; };
+		97733C9F138F4D2000938C09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97733C9E138F4D2000938C09 /* CoreGraphics.framework */; };
+		97733CA5138F4D2000938C09 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97733CA3138F4D2000938C09 /* InfoPlist.strings */; };
+		97733CA8138F4D2000938C09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97733CA7138F4D2000938C09 /* main.m */; };
+		97733CAB138F4D2000938C09 /* BookKeeperAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97733CAA138F4D2000938C09 /* BookKeeperAppDelegate.m */; };
+		97733CAF138F4D2000938C09 /* BookKeeperAppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 97733CAE138F4D2000938C09 /* BookKeeperAppDelegate_iPhone.m */; };
+		97733CB2138F4D2000938C09 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97733CB0138F4D2000938C09 /* MainWindow_iPhone.xib */; };
+		97733CB6138F4D2000938C09 /* BookKeeperAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 97733CB5138F4D2000938C09 /* BookKeeperAppDelegate_iPad.m */; };
+		97733CB9138F4D2000938C09 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97733CB7138F4D2000938C09 /* MainWindow_iPad.xib */; };
+		978D5DCE14678E300030A8B8 /* MyTransactionsDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 978D5DCD14678E2F0030A8B8 /* MyTransactionsDocument.m */; };
+		97B947FF139DCCF500D502B3 /* TransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B947FD139DCCF500D502B3 /* TransactionViewController.m */; };
+		97B94800139DCCF500D502B3 /* TransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97B947FE139DCCF500D502B3 /* TransactionViewController.xib */; };
+		97DE8B0913A9B5D200531C09 /* iPadicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 97DE8B0813A9B5D200531C09 /* iPadicon.png */; };
+		97DE8B0C13A9B5E900531C09 /* iPhone4icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 97DE8B0B13A9B5E900531C09 /* iPhone4icon.png */; };
+		97DE8B0E13A9B5F600531C09 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 97DE8B0D13A9B5F600531C09 /* icon.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9758E0BA16090A89000ADABB /* TransactionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionTableViewController.m; sourceTree = "<group>"; };
+		9758E0BB16090A89000ADABB /* TransactionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionTableViewController.h; sourceTree = "<group>"; };
+		97733C96138F4D2000938C09 /* BookKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97733C9A138F4D2000938C09 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		97733C9C138F4D2000938C09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		97733C9E138F4D2000938C09 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		97733CA2138F4D2000938C09 /* BookKeeper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BookKeeper-Info.plist"; sourceTree = "<group>"; };
+		97733CA4138F4D2000938C09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		97733CA6138F4D2000938C09 /* BookKeeper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BookKeeper-Prefix.pch"; sourceTree = "<group>"; };
+		97733CA7138F4D2000938C09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		97733CA9138F4D2000938C09 /* BookKeeperAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookKeeperAppDelegate.h; sourceTree = "<group>"; };
+		97733CAA138F4D2000938C09 /* BookKeeperAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookKeeperAppDelegate.m; sourceTree = "<group>"; };
+		97733CAD138F4D2000938C09 /* BookKeeperAppDelegate_iPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BookKeeperAppDelegate_iPhone.h; path = iPhone/BookKeeperAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		97733CAE138F4D2000938C09 /* BookKeeperAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BookKeeperAppDelegate_iPhone.m; path = iPhone/BookKeeperAppDelegate_iPhone.m; sourceTree = "<group>"; };
+		97733CB1138F4D2000938C09 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		97733CB4138F4D2000938C09 /* BookKeeperAppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BookKeeperAppDelegate_iPad.h; path = iPad/BookKeeperAppDelegate_iPad.h; sourceTree = "<group>"; };
+		97733CB5138F4D2000938C09 /* BookKeeperAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BookKeeperAppDelegate_iPad.m; path = iPad/BookKeeperAppDelegate_iPad.m; sourceTree = "<group>"; };
+		97733CB8138F4D2000938C09 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		978D5DA7145A57AE0030A8B8 /* BookKeeper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BookKeeper.entitlements; sourceTree = "<group>"; };
+		978D5DCC14678E2F0030A8B8 /* MyTransactionsDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTransactionsDocument.h; sourceTree = "<group>"; };
+		978D5DCD14678E2F0030A8B8 /* MyTransactionsDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTransactionsDocument.m; sourceTree = "<group>"; };
+		97B947FC139DCCF500D502B3 /* TransactionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionViewController.h; sourceTree = "<group>"; };
+		97B947FD139DCCF500D502B3 /* TransactionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionViewController.m; sourceTree = "<group>"; };
+		97B947FE139DCCF500D502B3 /* TransactionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionViewController.xib; sourceTree = "<group>"; };
+		97DE8B0813A9B5D200531C09 /* iPadicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPadicon.png; sourceTree = "<group>"; };
+		97DE8B0B13A9B5E900531C09 /* iPhone4icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone4icon.png; sourceTree = "<group>"; };
+		97DE8B0D13A9B5F600531C09 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97733C93138F4D2000938C09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97733C9B138F4D2000938C09 /* UIKit.framework in Frameworks */,
+				97733C9D138F4D2000938C09 /* Foundation.framework in Frameworks */,
+				97733C9F138F4D2000938C09 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		97733C8B138F4D2000938C09 = {
+			isa = PBXGroup;
+			children = (
+				97733CA0138F4D2000938C09 /* BookKeeper */,
+				97733C99138F4D2000938C09 /* Frameworks */,
+				97733C97138F4D2000938C09 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		97733C97138F4D2000938C09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97733C96138F4D2000938C09 /* BookKeeper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97733C99138F4D2000938C09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97733C9A138F4D2000938C09 /* UIKit.framework */,
+				97733C9C138F4D2000938C09 /* Foundation.framework */,
+				97733C9E138F4D2000938C09 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97733CA0138F4D2000938C09 /* BookKeeper */ = {
+			isa = PBXGroup;
+			children = (
+				978D5DA7145A57AE0030A8B8 /* BookKeeper.entitlements */,
+				9758E0BA16090A89000ADABB /* TransactionTableViewController.m */,
+				9758E0BB16090A89000ADABB /* TransactionTableViewController.h */,
+				97B947FC139DCCF500D502B3 /* TransactionViewController.h */,
+				97B947FD139DCCF500D502B3 /* TransactionViewController.m */,
+				97733CA9138F4D2000938C09 /* BookKeeperAppDelegate.h */,
+				97733CAA138F4D2000938C09 /* BookKeeperAppDelegate.m */,
+				978D5DCC14678E2F0030A8B8 /* MyTransactionsDocument.h */,
+				978D5DCD14678E2F0030A8B8 /* MyTransactionsDocument.m */,
+				97733CAC138F4D2000938C09 /* iPhone */,
+				97733CB3138F4D2000938C09 /* iPad */,
+				97733CA1138F4D2000938C09 /* Supporting Files */,
+			);
+			path = BookKeeper;
+			sourceTree = "<group>";
+		};
+		97733CA1138F4D2000938C09 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				97DE8B0D13A9B5F600531C09 /* icon.png */,
+				97DE8B0B13A9B5E900531C09 /* iPhone4icon.png */,
+				97DE8B0813A9B5D200531C09 /* iPadicon.png */,
+				97B947FE139DCCF500D502B3 /* TransactionViewController.xib */,
+				97733CA2138F4D2000938C09 /* BookKeeper-Info.plist */,
+				97733CA3138F4D2000938C09 /* InfoPlist.strings */,
+				97733CA6138F4D2000938C09 /* BookKeeper-Prefix.pch */,
+				97733CA7138F4D2000938C09 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		97733CAC138F4D2000938C09 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				97733CAD138F4D2000938C09 /* BookKeeperAppDelegate_iPhone.h */,
+				97733CAE138F4D2000938C09 /* BookKeeperAppDelegate_iPhone.m */,
+				97733CB0138F4D2000938C09 /* MainWindow_iPhone.xib */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		97733CB3138F4D2000938C09 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				97733CB4138F4D2000938C09 /* BookKeeperAppDelegate_iPad.h */,
+				97733CB5138F4D2000938C09 /* BookKeeperAppDelegate_iPad.m */,
+				97733CB7138F4D2000938C09 /* MainWindow_iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		97733C95138F4D2000938C09 /* BookKeeper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97733CBC138F4D2000938C09 /* Build configuration list for PBXNativeTarget "BookKeeper" */;
+			buildPhases = (
+				97733C92138F4D2000938C09 /* Sources */,
+				97733C93138F4D2000938C09 /* Frameworks */,
+				97733C94138F4D2000938C09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BookKeeper;
+			productName = BookKeeper;
+			productReference = 97733C96138F4D2000938C09 /* BookKeeper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		97733C8D138F4D2000938C09 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 97733C90138F4D2000938C09 /* Build configuration list for PBXProject "BookKeeper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 97733C8B138F4D2000938C09;
+			productRefGroup = 97733C97138F4D2000938C09 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97733C95138F4D2000938C09 /* BookKeeper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97733C94138F4D2000938C09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97733CA5138F4D2000938C09 /* InfoPlist.strings in Resources */,
+				97733CB2138F4D2000938C09 /* MainWindow_iPhone.xib in Resources */,
+				97733CB9138F4D2000938C09 /* MainWindow_iPad.xib in Resources */,
+				97B94800139DCCF500D502B3 /* TransactionViewController.xib in Resources */,
+				97DE8B0913A9B5D200531C09 /* iPadicon.png in Resources */,
+				97DE8B0C13A9B5E900531C09 /* iPhone4icon.png in Resources */,
+				97DE8B0E13A9B5F600531C09 /* icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		97733C92138F4D2000938C09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97733CA8138F4D2000938C09 /* main.m in Sources */,
+				97733CAB138F4D2000938C09 /* BookKeeperAppDelegate.m in Sources */,
+				97733CAF138F4D2000938C09 /* BookKeeperAppDelegate_iPhone.m in Sources */,
+				97733CB6138F4D2000938C09 /* BookKeeperAppDelegate_iPad.m in Sources */,
+				97B947FF139DCCF500D502B3 /* TransactionViewController.m in Sources */,
+				978D5DCE14678E300030A8B8 /* MyTransactionsDocument.m in Sources */,
+				9758E0BC16090A89000ADABB /* TransactionTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		97733CA3138F4D2000938C09 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97733CA4138F4D2000938C09 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		97733CB0138F4D2000938C09 /* MainWindow_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97733CB1138F4D2000938C09 /* en */,
+			);
+			name = MainWindow_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		97733CB7138F4D2000938C09 /* MainWindow_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97733CB8138F4D2000938C09 /* en */,
+			);
+			name = MainWindow_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		97733CBA138F4D2000938C09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		97733CBB138F4D2000938C09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		97733CBD138F4D2000938C09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = BookKeeper/BookKeeper.entitlements;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BookKeeper/BookKeeper-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "BookKeeper/BookKeeper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		97733CBE138F4D2000938C09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = BookKeeper/BookKeeper.entitlements;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BookKeeper/BookKeeper-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "BookKeeper/BookKeeper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		97733C90138F4D2000938C09 /* Build configuration list for PBXProject "BookKeeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97733CBA138F4D2000938C09 /* Debug */,
+				97733CBB138F4D2000938C09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97733CBC138F4D2000938C09 /* Build configuration list for PBXNativeTarget "BookKeeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97733CBD138F4D2000938C09 /* Debug */,
+				97733CBE138F4D2000938C09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 97733C8D138F4D2000938C09 /* Project object */;
+}

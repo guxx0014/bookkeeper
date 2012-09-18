@@ -13,3 +13,7 @@ build/*
 xcuserdata
 profile
 *.moved-aside
+# OS X
+.DS_Store
+# Specific to the project
+transactions.plist
