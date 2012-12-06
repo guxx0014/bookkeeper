@@ -30,7 +30,7 @@
     
     NSDate *date = [datePicker date];
     NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
-    [dateFormatter setDateFormat:@"MM/dd/yyyy"];
+    [dateFormatter setDateFormat:@"yyyy/MM/dd"];
     NSString *dateKey = [dateFormatter stringFromDate:date];
     NSLog(@"%@ -> %@ on date: %@", nameField.text, valueField.text, dateKey);
     
@@ -104,7 +104,7 @@
         nameField.text = [transaction objectForKey:@"name"];
         valueField.text = [transaction objectForKey:@"value"];
         NSDateFormatter *dateFormat = [[[NSDateFormatter alloc] init] autorelease];
-        [dateFormat setDateFormat:@"MM/dd/yyyy"];
+        [dateFormat setDateFormat:@"yyyy/MM/dd"];
         datePicker.date = [dateFormat dateFromString: date]; 
         NSString *repeatDays = [transaction objectForKey:@"repeatInterval"];
         if (repeatDays){

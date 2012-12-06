@@ -327,7 +327,7 @@
     {
         NSString *dateStr = [dates objectAtIndex: i];
         NSDateFormatter *dateFormat = [[[NSDateFormatter alloc] init] autorelease];
-        [dateFormat setDateFormat:@"MM/dd/yyyy"];
+        [dateFormat setDateFormat:@"yyyy/MM/dd"];
         NSDate *thisDate = [dateFormat dateFromString: dateStr];
         
         NSArray *transactionsOfDate = [self.pendingTransactions objectForKey: dateStr];
@@ -443,7 +443,7 @@
 -(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *dateStr = [self.dates objectAtIndex: indexPath.section];
     NSDateFormatter *dateFormat = [[[NSDateFormatter alloc] init] autorelease];
-    [dateFormat setDateFormat:@"MM/dd/yyyy"];
+    [dateFormat setDateFormat:@"yyyy/MM/dd"];
     NSDate *nsDate = [dateFormat dateFromString: dateStr];
     
     NSDate *today = [NSDate date];
@@ -461,7 +461,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         NSString *dateStr = [self.dates objectAtIndex: indexPath.section];
         NSDateFormatter *dateFormat = [[[NSDateFormatter alloc] init] autorelease];
-        [dateFormat setDateFormat:@"MM/dd/yyyy"];
+        [dateFormat setDateFormat:@"yyyy/MM/dd"];
         NSDate *oldDate = [dateFormat dateFromString: dateStr];
         
         NSMutableArray *transactionsOfDate = [self.transactions objectForKey: dateStr];
