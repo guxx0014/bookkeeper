@@ -47,12 +47,10 @@
     [mutableTransactionOfDate addObject:transaction];
     [self.transactions setObject:mutableTransactionOfDate forKey: dateKey];
     
-    if (indexPath){
-        [self.navigationController popViewControllerAnimated:YES];
-    }
+    [self.navigationController popViewControllerAnimated:YES];
     
     NSArray *viewControllers = self.navigationController.viewControllers;
-    TransactionTableViewController *ttvc = (TransactionTableViewController *)[viewControllers objectAtIndex:[viewControllers count]-2];
+    TransactionTableViewController *ttvc = (TransactionTableViewController *)[viewControllers objectAtIndex:0];
     ttvc.document.transactions = self.transactions;
     [ttvc.document updateChangeCount:UIDocumentChangeDone];
     NSLog(@"The transaction is saved to iCloud.");
