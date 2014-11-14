@@ -8,10 +8,12 @@
 
 #import "TransactionTableViewController.h"
 #import "TransactionViewController.h"
+#import "TransactionCoreDataTableViewController.h"
+#import "Transaction.h"
 
 @implementation TransactionTableViewController
 
-@synthesize pendingTransactions, completedTransactions, balance, document, titleLabel;
+@synthesize pendingTransactions, completedTransactions, balance, document, titleLabel, context;
 
 -(void)transactionsDocumentContentsUpdated:(MyTransactionsDocument *)transactionsDocument{
     self.pendingTransactions = transactionsDocument.transactions;
@@ -80,6 +82,34 @@
     return loadedTransactions;
 }
 
+- (void)populateDBFromPlist {
+    NSMutableDictionary *historyTransactions = [self loadTransactionsFromFile:@"history.plist"];
+    NSArray *dates = [historyTransactions allKeys];
+    NSInteger i;
+    NSDateFormatter *newDateFormat = [[[NSDateFormatter alloc] init] autorelease];
+    [newDateFormat setDateFormat:@"yyyy/MM/dd"];
+    NSDateFormatter *oldDateFormat = [[[NSDateFormatter alloc] init] autorelease];
+    [oldDateFormat setDateFormat:@"MM/dd/yyyy"];
+    for (i = 0; i < dates.count; i++) {
+        NSString *date = [dates objectAtIndex: i];
+        NSArray *transactionsOfDate = [historyTransactions objectForKey: date];
+        NSInteger j;
+        for (j=0; j<transactionsOfDate.count; j++){
+            NSDictionary *transaction = [transactionsOfDate objectAtIndex: j];
+            // add transaction to Core Data DB
+            Transaction *t = [NSEntityDescription insertNewObjectForEntityForName:@"Transaction"
+                                                           inManagedObjectContext:self.context];
+            t.name = [transaction objectForKey:@"name"];
+            t.value = [NSNumber numberWithDouble:[[transaction objectForKey:@"value"] doubleValue]];
+            t.date = [newDateFormat dateFromString: date];
+            if (t.date == nil) {
+                t.date = [oldDateFormat dateFromString: date];
+            }
+            NSLog(@"Save the transaction to Core Data DB: %@ -> %@ on %@", t.name, t.value, t.date);
+        }
+    }
+}
+
 - (NSMutableDictionary *)transactions{
     if (!pendingTransactions){
         pendingTransactions = [self loadTransactionsFromFile:@"transactions.plist"];
@@ -123,20 +153,15 @@
     //self.navigationItem.titleView = nil;
     self.navigationItem.titleView = self.titleLabel;
     //self.title = [NSString stringWithFormat:@"Balance: %@", [self inDollarFormat: balance]];
-    self.navigationItem.leftBarButtonItem = toggleButton;
+    self.navigationItem.leftBarButtonItem = historyButton;
 }
 
-- (void)toggleTransactions:(id)sender{
-    if (historyView == YES) {
-        historyView = NO;
-        [toggleButton setTitle:@"Completed"];
-        self.navigationItem.rightBarButtonItem = addButton;
-    }else{
-        historyView = YES;
-        [toggleButton setTitle:@"Pending"];
-        self.navigationItem.rightBarButtonItem = editButton;
-    }
-    [(UITableView *)self.view reloadData];
+- (void)showHistoryTransactions:(id)sender{
+    //[self performSegueWithIdentifier:@"history" sender: self];
+    TransactionCoreDataTableViewController *historyViewController = [[TransactionCoreDataTableViewController alloc] init];
+    historyViewController.context = self.context;
+    [self.navigationController pushViewController:historyViewController animated:YES];
+    [historyViewController release];
 }
 
 - (void)updateBalance:(id)sender{
@@ -160,7 +185,7 @@
     NSNumber *balanceNumber = [formatter numberFromString:newBalance];
     //self.navigationItem.titleView = nil;
     self.navigationItem.titleView = self.titleLabel;
-    self.navigationItem.leftBarButtonItem = toggleButton;
+    self.navigationItem.leftBarButtonItem = historyButton;
     self.balance = [balanceNumber doubleValue];
     
     NSLog(@"Saving new balance %f to iCloud.", self.balance);
@@ -210,7 +235,7 @@
     [addButton release];
     [editButton release];
     [cancelButton release];
-    [toggleButton release];
+    [historyButton release];
     [textFieldRounded release];
     [titleLabel release];
     [super dealloc];
@@ -230,7 +255,7 @@
 {
     [super viewDidLoad];
     
-    toggleButton = [[UIBarButtonItem alloc] initWithTitle:@"Completed" style:UIBarButtonItemStyleBordered target:self action:@selector(toggleTransactions:)];
+    historyButton = [[UIBarButtonItem alloc] initWithTitle:@"History" style:UIBarButtonItemStyleBordered target:self action:@selector(showHistoryTransactions:)];
     addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addTransaction:)];
     editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(purgeTransactions:)];
     cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(cancelUpdateBalance:)];
@@ -251,7 +276,7 @@
 
 
     self.navigationItem.titleView = self.titleLabel;
-    self.navigationItem.leftBarButtonItem = toggleButton;
+    self.navigationItem.leftBarButtonItem = historyButton;
     self.navigationItem.rightBarButtonItem = addButton;
 
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]
@@ -275,7 +300,7 @@
     addButton = nil;
     editButton = nil;
     cancelButton = nil;
-    toggleButton = nil;
+    historyButton = nil;
     textFieldRounded = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -494,6 +519,14 @@
             }
             [completedTransactionsOfDate addObject:transaction];
             [self.completedTransactions setObject:completedTransactionsOfDate forKey:dateStr];
+
+            // add transaction to Core Data DB
+            Transaction *t = [NSEntityDescription insertNewObjectForEntityForName:@"Transaction"
+                                                           inManagedObjectContext:self.context];
+            t.name = [transaction objectForKey:@"name"];
+            t.value = [NSNumber numberWithDouble:[amount doubleValue]];
+            t.date = oldDate;
+            NSLog(@"Save the transaction to Core Data DB: %@ -> %@ on %@", t.name, t.value, t.date);
         }   
         
         NSNumber *repeatInterval = [transaction objectForKey:@"repeatInterval"];

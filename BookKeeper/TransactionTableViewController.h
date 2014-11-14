@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "MyTransactionsDocument.h"
 
-
 @interface TransactionTableViewController : UITableViewController <UITextFieldDelegate> {
     NSMutableDictionary *transactions, *pendingTransactions, *completedTransactions;
     double balance;
@@ -17,15 +16,16 @@
     
     UITextField *textFieldRounded;
     UILabel *titleLabel;
-    UIBarButtonItem *toggleButton, *addButton, *editButton, *cancelButton;
+    UIBarButtonItem *historyButton, *addButton, *editButton, *cancelButton;
 }
 @property (nonatomic) double balance;
 @property (retain, nonatomic) UILabel *titleLabel;
 @property (retain, nonatomic) NSMutableDictionary *pendingTransactions, *completedTransactions;
 @property (strong, nonatomic) MyTransactionsDocument *document;
+@property (strong, nonatomic) NSManagedObjectContext *context;
 
 -(void)addTransaction:(id)sender;
 -(NSInteger)numberOfTransactionsPastDue;
 -(void)transactionsDocumentContentsUpdated:(MyTransactionsDocument *)transactionsDocument;
-
+-(void)populateDBFromPlist;
 @end

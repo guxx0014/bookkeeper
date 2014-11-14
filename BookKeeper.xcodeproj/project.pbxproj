@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97227AF41A088DE20018A9EB /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97227AF31A088DE20018A9EB /* CoreDataTableViewController.m */; };
+		97227AF71A089D480018A9EB /* Transactions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 97227AF51A089D480018A9EB /* Transactions.xcdatamodeld */; };
+		97227AFC1A089EC00018A9EB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97227AFB1A089EC00018A9EB /* CoreData.framework */; };
+		97227B011A08A1820018A9EB /* TransactionCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97227B001A08A1810018A9EB /* TransactionCoreDataTableViewController.m */; };
+		97227B0A1A08AB4F0018A9EB /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 97227B091A08AB4F0018A9EB /* Transaction.m */; };
 		9758E0BC16090A89000ADABB /* TransactionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9758E0BA16090A89000ADABB /* TransactionTableViewController.m */; };
 		97733C9B138F4D2000938C09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97733C9A138F4D2000938C09 /* UIKit.framework */; };
 		97733C9D138F4D2000938C09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97733C9C138F4D2000938C09 /* Foundation.framework */; };
@@ -28,6 +33,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		97227AF21A088DE20018A9EB /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		97227AF31A088DE20018A9EB /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		97227AF61A089D480018A9EB /* Transactions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Transactions.xcdatamodel; sourceTree = "<group>"; };
+		97227AFB1A089EC00018A9EB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		97227AFF1A08A1810018A9EB /* TransactionCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransactionCoreDataTableViewController.h; path = ../TransactionCoreDataTableViewController.h; sourceTree = "<group>"; };
+		97227B001A08A1810018A9EB /* TransactionCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransactionCoreDataTableViewController.m; path = ../TransactionCoreDataTableViewController.m; sourceTree = "<group>"; };
+		97227B081A08AB4F0018A9EB /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		97227B091A08AB4F0018A9EB /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 		9758E0BA16090A89000ADABB /* TransactionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionTableViewController.m; sourceTree = "<group>"; };
 		9758E0BB16090A89000ADABB /* TransactionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionTableViewController.h; sourceTree = "<group>"; };
 		97733C96138F4D2000938C09 /* BookKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,7 +65,7 @@
 		97B947FC139DCCF500D502B3 /* TransactionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionViewController.h; sourceTree = "<group>"; };
 		97B947FD139DCCF500D502B3 /* TransactionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionViewController.m; sourceTree = "<group>"; };
 		97B947FE139DCCF500D502B3 /* TransactionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionViewController.xib; sourceTree = "<group>"; };
-		97BA47C616140B1300990416 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		97BA47C616140B1300990416 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		97DE8B0813A9B5D200531C09 /* iPadicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPadicon.png; sourceTree = "<group>"; };
 		97DE8B0B13A9B5E900531C09 /* iPhone4icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone4icon.png; sourceTree = "<group>"; };
 		97DE8B0D13A9B5F600531C09 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97227AFC1A089EC00018A9EB /* CoreData.framework in Frameworks */,
 				97733C9B138F4D2000938C09 /* UIKit.framework in Frameworks */,
 				97733C9D138F4D2000938C09 /* Foundation.framework in Frameworks */,
 				97733C9F138F4D2000938C09 /* CoreGraphics.framework in Frameworks */,
@@ -75,7 +89,6 @@
 		97733C8B138F4D2000938C09 = {
 			isa = PBXGroup;
 			children = (
-				97BA47C616140B1300990416 /* Default-568h@2x.png */,
 				97733CA0138F4D2000938C09 /* BookKeeper */,
 				97733C99138F4D2000938C09 /* Frameworks */,
 				97733C97138F4D2000938C09 /* Products */,
@@ -93,6 +106,7 @@
 		97733C99138F4D2000938C09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97227AFB1A089EC00018A9EB /* CoreData.framework */,
 				97733C9A138F4D2000938C09 /* UIKit.framework */,
 				97733C9C138F4D2000938C09 /* Foundation.framework */,
 				97733C9E138F4D2000938C09 /* CoreGraphics.framework */,
@@ -103,6 +117,13 @@
 		97733CA0138F4D2000938C09 /* BookKeeper */ = {
 			isa = PBXGroup;
 			children = (
+				97227AFF1A08A1810018A9EB /* TransactionCoreDataTableViewController.h */,
+				97227B001A08A1810018A9EB /* TransactionCoreDataTableViewController.m */,
+				97227B081A08AB4F0018A9EB /* Transaction.h */,
+				97227B091A08AB4F0018A9EB /* Transaction.m */,
+				97227AF51A089D480018A9EB /* Transactions.xcdatamodeld */,
+				97227AF21A088DE20018A9EB /* CoreDataTableViewController.h */,
+				97227AF31A088DE20018A9EB /* CoreDataTableViewController.m */,
 				978D5DA7145A57AE0030A8B8 /* BookKeeper.entitlements */,
 				9758E0BA16090A89000ADABB /* TransactionTableViewController.m */,
 				9758E0BB16090A89000ADABB /* TransactionTableViewController.h */,
@@ -122,6 +143,7 @@
 		97733CA1138F4D2000938C09 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				97BA47C616140B1300990416 /* Default-568h@2x.png */,
 				97DE8B0D13A9B5F600531C09 /* icon.png */,
 				97DE8B0B13A9B5E900531C09 /* iPhone4icon.png */,
 				97DE8B0813A9B5D200531C09 /* iPadicon.png */,
@@ -228,9 +250,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				97733CA8138F4D2000938C09 /* main.m in Sources */,
+				97227AF71A089D480018A9EB /* Transactions.xcdatamodeld in Sources */,
 				97733CAB138F4D2000938C09 /* BookKeeperAppDelegate.m in Sources */,
+				97227AF41A088DE20018A9EB /* CoreDataTableViewController.m in Sources */,
+				97227B011A08A1820018A9EB /* TransactionCoreDataTableViewController.m in Sources */,
 				97733CAF138F4D2000938C09 /* BookKeeperAppDelegate_iPhone.m in Sources */,
 				97733CB6138F4D2000938C09 /* BookKeeperAppDelegate_iPad.m in Sources */,
+				97227B0A1A08AB4F0018A9EB /* Transaction.m in Sources */,
 				97B947FF139DCCF500D502B3 /* TransactionViewController.m in Sources */,
 				978D5DCE14678E300030A8B8 /* MyTransactionsDocument.m in Sources */,
 				9758E0BC16090A89000ADABB /* TransactionTableViewController.m in Sources */,
@@ -314,6 +340,7 @@
 				GCC_PREFIX_HEADER = "BookKeeper/BookKeeper-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "BookKeeper/BookKeeper-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -332,6 +359,7 @@
 				GCC_PREFIX_HEADER = "BookKeeper/BookKeeper-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "BookKeeper/BookKeeper-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
@@ -361,6 +389,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		97227AF51A089D480018A9EB /* Transactions.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				97227AF61A089D480018A9EB /* Transactions.xcdatamodel */,
+			);
+			currentVersion = 97227AF61A089D480018A9EB /* Transactions.xcdatamodel */;
+			name = Transactions.xcdatamodeld;
+			path = ../Transactions.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 97733C8D138F4D2000938C09 /* Project object */;
 }

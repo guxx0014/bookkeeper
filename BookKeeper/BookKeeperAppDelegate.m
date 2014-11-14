@@ -135,11 +135,36 @@
         NSLog(@"AppDelegate: No iCloud access (either you are using simulator or, if you are on your phone, you should check settings");
     }
     
+    // Core Data
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *documentsDirectory = [[fileManager URLsForDirectory:NSDocumentDirectory
+                                                     inDomains:NSUserDomainMask] firstObject];
+    NSURL *url = [documentsDirectory URLByAppendingPathComponent:@"transactions.db"];
+    UIManagedDocument *document = [[UIManagedDocument alloc] initWithFileURL:url];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[url path]]) {
+        [document openWithCompletionHandler:^(BOOL success) {
+            if (success && document.documentState == UIDocumentStateNormal) {
+                ttvc.context = document.managedObjectContext;
+                NSLog(@"open core data file successfully.");
+            };
+        }];
+    } else {
+        [document saveToURL:url forSaveOperation:UIDocumentSaveForCreating
+          completionHandler:^(BOOL success) {
+            if (success && document.documentState == UIDocumentStateNormal) {
+                ttvc.context = document.managedObjectContext;
+                NSLog(@"create core data file successfully.");
+                [ttvc populateDBFromPlist];
+                NSLog(@"Populate core data file succcessfully.");
+            };
+        }];
+    }
+
     [nav pushViewController: ttvc animated: NO];
     [ttvc release];
     [self.window addSubview: nav.view];
     [self.window makeKeyAndVisible];
-    
+
     return YES;
 }
 
