@@ -162,7 +162,7 @@
 
     [nav pushViewController: ttvc animated: NO];
     [ttvc release];
-    [self.window addSubview: nav.view];
+    [self.window setRootViewController:nav];
     [self.window makeKeyAndVisible];
 
     return YES;
