@@ -166,7 +166,7 @@
 
 - (void)updateBalance:(id)sender{
         
-    self.navigationItem.leftBarButtonItem = cancelButton;
+    //self.navigationItem.leftBarButtonItem = cancelButton;
 
     self.navigationItem.titleView = textFieldRounded;
 }
@@ -178,14 +178,18 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     if (!self.navigationItem.titleView) return; //This is when cancel button is clicked.
-    UITextField *balanceField = (UITextField *)self.navigationItem.titleView;
-    NSString *newBalance = balanceField.text;
-    NSNumberFormatter *formatter = [[[NSNumberFormatter alloc] init] autorelease];
-    [formatter setNumberStyle: NSNumberFormatterDecimalStyle];
-    NSNumber *balanceNumber = [formatter numberFromString:newBalance];
     //self.navigationItem.titleView = nil;
     self.navigationItem.titleView = self.titleLabel;
     self.navigationItem.leftBarButtonItem = historyButton;
+    UITextField *balanceField = (UITextField *)self.navigationItem.titleView;
+    NSString *newBalance = balanceField.text;
+    if ([newBalance containsString:@"Balance:"]) {
+        NSLog(@"No input for new balance. Ignore...");
+        return;
+    }
+    NSNumberFormatter *formatter = [[[NSNumberFormatter alloc] init] autorelease];
+    [formatter setNumberStyle: NSNumberFormatterDecimalStyle];
+    NSNumber *balanceNumber = [formatter numberFromString:newBalance];
     self.balance = [balanceNumber doubleValue];
     
     NSLog(@"Saving new balance %f to iCloud.", self.balance);
