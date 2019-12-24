@@ -181,21 +181,18 @@
     //self.navigationItem.titleView = nil;
     self.navigationItem.titleView = self.titleLabel;
     self.navigationItem.leftBarButtonItem = historyButton;
-    UITextField *balanceField = (UITextField *)self.navigationItem.titleView;
-    NSString *newBalance = balanceField.text;
-    if ([newBalance containsString:@"Balance:"]) {
-        NSLog(@"No input for new balance. Ignore...");
-        return;
-    }
+    NSString *newBalance = textField.text;
     NSNumberFormatter *formatter = [[[NSNumberFormatter alloc] init] autorelease];
     [formatter setNumberStyle: NSNumberFormatterDecimalStyle];
     NSNumber *balanceNumber = [formatter numberFromString:newBalance];
-    self.balance = [balanceNumber doubleValue];
-    
-    NSLog(@"Saving new balance %f to iCloud.", self.balance);
-    NSUbiquitousKeyValueStore* keyValueStore = [NSUbiquitousKeyValueStore defaultStore];
-    [keyValueStore setDouble: self.balance forKey: @"balance"];
-    [keyValueStore synchronize];
+    if (balanceNumber) {
+        self.balance = [balanceNumber doubleValue];
+        [[NSUserDefaults standardUserDefaults] setDouble:self.balance forKey:@"balance"];
+        NSLog(@"Saving new balance %f to iCloud.", self.balance);
+        NSUbiquitousKeyValueStore* keyValueStore = [NSUbiquitousKeyValueStore defaultStore];
+        [keyValueStore setDouble: self.balance forKey: @"balance"];
+        [keyValueStore synchronize];
+    }
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
